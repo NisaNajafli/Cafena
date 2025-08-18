@@ -140,4 +140,31 @@ h1{
     background-color: #232020;
     color: #fff;
 }
+.coffee__section-content{
+    display: flex;
+    gap: 30px;
+}
+.coffee__section-content img{
+    width: 100%;
+    object-fit: cover;
+    max-height: 256px;
+    max-width: 350px;
+}
+.coffee__section-content-imgs{
+    position: relative;
+}
+.coffee__section-content-imgs > img{
+    position: relative;
+    z-index: 1;
+
+}
+.coffee__section-content-subimgs{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.coffee__section-content-subimgs:nth-of-type(1){
+    top:22px;
+    left:-13px
+}
 

@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+     <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Manu</a></li>
+                        <li><a href="">Reservation</a></li>
+                    </ul>
+  </div>
+</div>
     <header>
         <div class="container">
             <nav>
@@ -32,7 +48,8 @@
                     </div>
                     <div class="nav__right-icons">
                         <img src="img/zoomicon.png" alt="">
-                        <img src="img/dropdownmenu.png" alt="">
+                        <button  data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img src="img/dropdownmenu.png" alt=""></button>
+                        
                     </div>
                 </div>
             </nav>
@@ -56,55 +73,43 @@
         </section>
         <section class="coffee__section">
             <div class="container">
-                <div class="coffee__section-content">
-                    <div class="coffee__section-content-imgs">
-                        <img  src="img/coffee1.png" alt="">
-                        <p>Curabitur semper erat a lacusey sedny <br> consequat,sit ametey.</p>
-                        <div class="coffee__section-content-subimgs">
-                            <div>
-                                <img class="coffeebg" src="img/coffeebackground.png" alt="">
-                            </div>
-                            <div>
-                                <img class="vector" src="img/Vector 1.png" alt="">
-                                <div class="txts">
-                                    <h4>01</h4>
-                                    <h5>Best Coffee Flavor</h5>
-                                </div>
-                            </div>
+                <div class="coffee__cards">
+                <div class="coffee__card">
+                    <img src="img/coffee1.png" alt="">
+                    <div class="coffee__overlay">
+                        <img src="img/Vector 1.png" alt="" class="coffee__label">
+                        <div class="coffee__text">
+                        <h4>01</h4>
+                        <h5>Best Coffee Flavor</h5>
                         </div>
+                        <p>Curabitur semper erat a lacusey sedny consequat,sit ametey.</p>
                     </div>
-                    <div class="coffee__section-content-imgs">
-                        <img src="img/coffee2.png" alt="">
-                        <p>Curabitur semper erat a lacusey sedny <br> consequat,sit ametey.</p>
-                        <div class="coffee__section-content-subimgs">
-                           <div>
-                                <img class="coffeebg" src="img/coffeebackground.png" alt="">
-                            </div>
-                            <div>
-                                <img class="vector" src="img/Vector 1.png" alt="">
-                                <div class="txts">
-                                    <h4>02</h4>
-                                    <h5>Proper Roasting</h5>
-                                </div>
-                            </div>
+                </div>
+
+                <div class="coffee__card">
+                    <img src="img/coffee2.png" alt="">
+                    <div class="coffee__overlay">
+                        <img src="img/Vector 1.png" alt="" class="coffee__label">
+                        <div class="coffee__text">
+                        <h4>02</h4>
+                        <h5>Proper Roasting</h5>
                         </div>
+                        <p>Curabitur semper erat a lacusey sedny consequat,sit ametey.</p>
                     </div>
-                    <div class="coffee__section-content-imgs">
-                        <img class="esas" src="img/coffee3.png" alt="">
-                        <p>Curabitur semper erat a lacusey sedny <br> consequat,sit ametey.</p>
-                        <div class="coffee__section-content-subimgs">
-                            <div>
-                                <img class="coffeebg" src="img/coffeebackground.png" alt="">
-                            </div>
-                            <div>
-                                <img class="vector" src="img/Vector 1.png" alt="">
-                                <div class="txts">
-                                    <h4>03</h4>
-                                    <h5>Place to Get Lost</h5>
-                                </div>
-                            </div>
+                </div>
+
+                <div class="coffee__card">
+                    <img src="img/coffee3.png" alt="">
+                    <div class="coffee__overlay">
+                        <img src="img/Vector 1.png" alt="" class="coffee__label">
+                        <div class="coffee__text">
+                        <h4>03</h4>
+                        <h5>Place to Get Lost</h5>
                         </div>
+                        <p>Curabitur semper erat a lacusey sedny consequat,sit ametey.</p>
                     </div>
+                </div>
+
                 </div>
             </div>
         </section>
@@ -117,8 +122,55 @@
                 </div>
             </div>
         </section>
+        <section class="product__section">
+            <div class="container">
+                <div class="product__section-content-top">
+                    <button>Popular Product</button>
+                    <h2>Cafena Popular Product</h2>
+                </div>
+                <div class="product__section-content">
+                    <div class="product__card">
+                        <img src="img/Mask group.png" alt="">
+                        <h3>Vicaragua Coffee Beans</h3>
+                        <p>$29</p>
+                    </div>
+                    <div class="product__card">
+                        <img src="img/Mask group.png" alt="">
+                         <h3>Vicaragua Coffee Beans</h3>
+                        <p>$29</p>
+                    </div>
+                    <div class="product__card">
+                        <img src="img/Mask group (1).png" alt="">
+                        <h3>Espresso Ristretto</h3>
+                        <p>$29</p>
+                    </div>
+                    <div class="product__card">
+                        <img src="img/Mask group (1).png" alt="">
+                        <h3>Espresso Ristretto</h3>
+                        <p>$29</p>
+                    </div>
+                    <div class="product__card">
+                        <img src="img/Mask group (2).png" alt="">
+                        <h3>Ethiopia Coffee</h3>
+                        <p>$29</p>
+                    </div>
+                    <div class="product__card">
+                        <img src="img/Mask group (2).png" alt="">
+                        <h3>Ethiopia Coffee</h3>
+                        <p>$29</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
     
 </body>
 </html>

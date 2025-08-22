@@ -13,6 +13,47 @@ header{
     background-color: var(--ag);
 
 }
+.offcanvas{
+    background-color: var(--ag);
+    
+}
+.offcanvas-body ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+.offcanvas-body {
+    margin: auto;
+    
+}
+.offcanvas-body ul li{
+    padding-top: 10px;
+}
+
+.offcanvas-body ul li a{
+    text-decoration: none;
+    color: #fff;
+    font: 400 16px Montserrat;
+    border: 1px solid #D48A5C;
+    background-color: #D48A5C;
+    max-width: 202px;
+    width: 100%;
+    padding: 10px 30px;
+    display: block;
+    text-align: center;
+
+}
+.offcanvas-bottom {
+    display: flex;
+    justify-content:center
+}
+.offcanvas-bottom img{
+    height: 60px;
+    width: 80px;
+    display: flex;
+} 
+
 nav{
     padding: 25px;
     display: flex;
@@ -57,15 +98,16 @@ nav{
     padding-top: 20px;
 }
 
-.nav__right-icons img:nth-last-of-type(2){
-    height: 22px;
-    width: 19px;
-}
 .nav__right-icons img:nth-last-of-type(1){
-    margin-top: 3px;
-    height: 15px;
-    width: 23px;
+    height: 17px;
+    width: 18px;
 } 
+nav button{
+    display: block;
+}
+.nav__left , .nav__right{
+    display: none;
+}
 .hero__section{
     height: 100%;
     background-color: var(--ag)
@@ -110,6 +152,7 @@ h1 {
     flex-direction: row;
     gap: 24px;
     text-align: center;
+    justify-content: center;
 }
 .hero__section-btns button{
     height: 41px;
@@ -393,6 +436,9 @@ h1 {
 }
 
 @media (min-width: 768px){
+    nav button{
+        display: none;
+    }
     .hero__section-content{
         flex-direction: row;
         
@@ -416,6 +462,12 @@ h1 {
     grid-template-rows: auto;
     column-gap: 120px;
 }   
+    .nav__left , .nav__right{
+        display: flex;
+    }
+    .hero__section-btns{
+        justify-content: inherit;
+    }
 
     
 }
@@ -425,6 +477,9 @@ h1 {
         flex-direction: column;
         align-items: center;
     }
+    nav button{
+        display: block;
+    }    
     h1{
         font: 400 45px ZCOOL;
         padding-bottom: 33px;
@@ -450,6 +505,12 @@ h1 {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 }
+.nav__left , .nav__right{
+    display: none;
+}
+.hero__section-btns{
+        justify-content: inherit;
+    }
 }
 
 
@@ -462,7 +523,7 @@ h1 {
         max-width: 443px;
         width: 100%;
         height: 98px;
-    }
+    }     
 }
 @media (max-width: 1400px) and (min-width: 1200px){
     .product__card h3{
@@ -475,9 +536,19 @@ h1 {
     .product__card{
         height: 104px;
     }
+    nav button{
+        display: none;
+    }    
+.nav__left , .nav__right{
+    display: flex;
+}
+.hero__section-btns{
+        justify-content: inherit;
+    }
+
 }
 
-@media (max-width: 1200px) and (min-width: 990px){
+@media (max-width: 1200px) and (min-width: 992px){
     .product__card h3{
         font-size: 18px;
     }
@@ -488,5 +559,11 @@ h1 {
     .product__card{
         height: 80px;
     }
+    .nav__right-icons button{
+        display: none;
+    }    
+    .nav__left , .nav__right{
+    display: flex;
+}
 }
 
